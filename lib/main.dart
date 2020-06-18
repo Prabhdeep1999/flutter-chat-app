@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chat_app/pages/home_page.dart';
 import 'package:flutter_chat_app/pages/registration_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences.getInstance().then((prefs) {
     runApp(LandingPage(prefs: prefs));
   });
@@ -15,9 +17,7 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      debugShowCheckedModeBanner: false,
       home: _decideMainPage(),
     );
   }

@@ -180,6 +180,15 @@ class _RegistrationPageState extends State<RegistrationPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+              Hero(
+                tag: 'logo',
+                child: Container(
+                  width: 100.0,
+                  child: Image.asset("assets/solar_logo.png"),
+                ),
+              ),
+              SizedBox(height: 20,),
+
             Padding(
               padding: EdgeInsets.all(10),
               child: TextField(
@@ -205,7 +214,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               child: Text('Verify'),
               textColor: Colors.white,
               elevation: 7,
-              color: Colors.blue,
+              color: Colors.red[800],
             )
           ],
         ),
