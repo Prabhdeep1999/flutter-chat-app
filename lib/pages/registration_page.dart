@@ -58,11 +58,29 @@ class _RegistrationPageState extends State<RegistrationPage> {
         barrierDismissible: false,
         builder: (BuildContext context) {
           return new AlertDialog(
-            title: Text('Enter SMS Code'),
+            title: Text(
+              'Enter SMS Code',
+              style: TextStyle(
+                color: Colors.red[800],
+              ),
+            ),
             content: Container(
               height: 85,
               child: Column(children: [
                 TextField(
+                  decoration: InputDecoration(
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                      )
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                      )
+                    ),
+                  ),
+                  cursorColor: Colors.black,
                   onChanged: (value) {
                     this.smsOTP = value;
                   },
@@ -78,7 +96,15 @@ class _RegistrationPageState extends State<RegistrationPage> {
             contentPadding: EdgeInsets.all(10),
             actions: <Widget>[
               FlatButton(
-                child: Text('Done'),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Done',
+                    style: TextStyle(
+                      color: Colors.red[800]
+                    ),
+                  ), 
+                ), 
                 onPressed: () {
                   _auth.currentUser().then((user) async {
                     signIn();
@@ -192,7 +218,22 @@ class _RegistrationPageState extends State<RegistrationPage> {
             Padding(
               padding: EdgeInsets.all(10),
               child: TextField(
-                decoration: InputDecoration(hintText: '+910000000000'),
+                decoration: InputDecoration(
+                  hintText: 'Enter your number with +91 prefix',
+                  hintStyle: TextStyle(
+                    color: Colors.grey[400],
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.black,
+                    )
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.black,
+                    )
+                  ),
+                ),
                 onChanged: (value) {
                   this.phoneNo = value;
                 },
