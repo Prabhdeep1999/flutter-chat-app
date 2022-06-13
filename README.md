@@ -596,6 +596,6 @@ android.useAndroidX=true
 android.enableJetifier=true
 In android/gradle.properties file
 
- Git: [https://github.com/myvsparth/flutter_chat_app](https://github.com/Prabhdeep1999/flutter-Chat-App)
+ Git: https://github.com/Prabhdeep1999/flutter-Chat-App
 
 ## Related Tags: Flutter, Chat App, Dart, Android, iOS, Chat App Source Code, Chat App Demo
